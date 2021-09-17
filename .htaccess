@@ -1,0 +1,5 @@
+Options +FollowSymLinks
+
+RewriteEngine On
+RewriteRule ^List/Users$ /index.php?page=users [R,L]
+RewriteRule ^List/Ads$ /index.php?page=ads [R,L]
