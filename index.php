@@ -1,5 +1,7 @@
 <?php
-    $targetFile = "/controllers/";
+    set_include_path("/opt/lampp/htdocs/");
+
+    $targetFile = "controllers/";
     $pageName = "main";
 
     if(isset($_GET["page"])) { // $_GET["page"] doesn't exist means user's trying to access '/' -> the main page
@@ -13,16 +15,16 @@
      * If the file does not exist, it redirects the user to the 404 page.
      */
     if(file_exists($targetFile)) {
-        require_once($targetFile);
+        include_once($targetFile);
 
         $className = ucfirst($pageName) . "Controller"; // The classname in target file
 
         if(class_exists($className)) {
             new $className;
         } else {
-            header("Location: views/404.html");
+            include_once("views/404.html");
         }
     } else {
-        header("Location: views/404.html");
+        include_once("views/404.html");
     }
 ?>
