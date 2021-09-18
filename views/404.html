@@ -1,8 +1,38 @@
 <html>
     <head>
         <title>404 - Not found</title>
+
+        <link rel="stylesheet" href="/css/style.css">
+
+        <style>
+            #notfound-container {
+                margin: 10% auto;
+                text-align: center;
+            }
+
+            #first {
+                font-weight: lighter;
+                font-size: 200px;
+
+                margin: 0;
+            }
+
+            #second {
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 25px;
+
+                margin-top: 10px;
+                margin-bottom: 100px;
+            }
+        </style>
     </head>
     <body>
-        <h2>404</h2>
+        <div id="notfound-container">
+            <p id="first">404</p>
+            <p id="second">Page not found</p>
+        
+            <a href="/index.php" class="main-btn">Go to the main page</a>
+        </div>
     </body>
 </html> 

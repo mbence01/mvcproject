@@ -7,10 +7,15 @@ a, a:visited, a:hover, a:active {
 
 body {
     font-family: 'Ubuntu', sans-serif;
+
+    background-image: url('/css/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+/* Index */
 #main-container {
-    margin: 20% auto;
+    margin: 10% auto;
     width: 70%;
     text-align: center;
 }
@@ -49,4 +54,106 @@ body {
 
     color: black;
     border: 1px solid black;
+}
+
+
+
+/* User list */
+#users-container {
+    margin: 5% auto;
+    width: 70%;
+    text-align: center;
+}
+
+#users-title {
+    font-size: 32px;
+    font-weight: bold;
+
+    margin: 10px 0px;
+}
+
+#users-table {
+    margin: 50px auto;
+    width: 70%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#users-table tr:first-child {
+    background: rgba(0, 0, 0, .8);
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    border-bottom: 1px solid black;
+}
+
+th {
+    padding: 10px 15px;
+}
+
+td {
+    padding: 10px 15px;
+}
+
+tr:nth-child(odd) {
+    background: rgba(0, 0, 0, .1);
+}
+
+hr {
+    display: block;
+
+    border: 1px solid black;
+    border-radius: 10px;
+    
+    width: 50%;
+}
+
+
+
+/* Advertisement list */
+#records {
+    margin-bottom: 50px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+@media(max-width: 768px) {
+    #records {
+        flex-direction: column;
+    }
+}
+
+.ads-record {
+    transition: .5s;
+
+    margin: 15px 15px;
+    padding: 15px 15px;
+
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    background: rgba(0, 0, 0, .1);
+
+    color: black;
+}
+
+.ads-record:hover {
+    transition: .5s;
+    transform: scale(1.05);
+}
+
+.ads-ttl {
+    font-size: 16px;
+    font-weight: 800;
+
+    text-align: center;
+}
+
+.ads-author {
+    font-size: 12px;
+
+    text-align: right;
 }
